@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/marshot9420/marshot-frontend/issues"
   },
-  "homepage": "https://github.com/marshot9420/marshot-frontend#readme"
+  "homepage": "https://github.com/marshot9420/marshot-frontend#readme",
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
 }
