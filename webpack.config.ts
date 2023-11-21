@@ -84,7 +84,7 @@ const config: IConfiguration = {
     }),
     new webpack.EnvironmentPlugin({ NODE_ENV: isDevMode ? DEV_ENV : PROD_ENV }),
     new HtmlWebpackPlugin({
-      template: `./${PUBLIC_DIR}/index.html}`,
+      template: `./${PUBLIC_DIR}/index.html`,
     }),
     new CleanWebpackPlugin(),
   ],
