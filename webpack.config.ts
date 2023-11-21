@@ -23,11 +23,13 @@ const isDevMode = process.env.NODE_ENV !== PROD_ENV;
 
 dotenv.config({ path: isDevMode ? '.env.development' : '.env.production' });
 
-const PORT = process.env.PORT;
+const API_PREFIX = '/api';
+const API_BASE_URL = isDevMode ? 'http://localhost:4000' : API_PREFIX;
 
 const SOURCE_DIR = 'src';
 const PUBLIC_DIR = 'public';
 const OUTPUT_DIR = 'dist';
+const STATIC_PREFIX = 'static';
 
 const config: IConfiguration = {
   name: 'marshot-frontend',
@@ -93,11 +95,20 @@ const config: IConfiguration = {
     filename: '[name].js',
   },
   devServer: {
-    historyApiFallback: false,
-    port: PORT,
-    static: { directory: path.resolve(__dirname, PUBLIC_DIR) },
+    historyApiFallback: true,
+    port: 3000,
+    static: {
+      directory: path.resolve(__dirname, PUBLIC_DIR),
+      publicPath: STATIC_PREFIX,
+    },
     open: true,
-    hot: true,
+    proxy: {
+      [API_PREFIX]: {
+        target: API_BASE_URL,
+        changeOrigin: true,
+        ws: true,
+      },
+    },
   },
 };
 
