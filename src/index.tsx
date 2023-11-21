@@ -7,7 +7,7 @@ import { ThemeProvider } from '@emotion/react';
 
 import App from '@/App';
 
-import { theme } from '@/styles';
+import { GlobalStyles, theme } from '@/styles';
 
 const root = document.getElementById('root');
 
@@ -18,6 +18,7 @@ const appRoot = CreateDOM.createRoot(root);
 appRoot.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
+      <GlobalStyles />
       <App />
     </BrowserRouter>
   </ThemeProvider>,
