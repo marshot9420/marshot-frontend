@@ -9,6 +9,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 import { Configuration as DevServerConfig } from 'webpack-dev-server';
 
@@ -54,6 +55,11 @@ const config: IConfiguration = {
             '@babel/preset-react',
             '@babel/preset-typescript',
           ],
+          env: {
+            development: {
+              plugins: [require.resolve('react-refresh/babel')],
+            },
+          },
         },
         exclude: path.resolve(__dirname, 'node_modules'),
       },
@@ -78,13 +84,19 @@ const config: IConfiguration = {
     port: PORT,
     static: { directory: path.resolve(__dirname, PUBLIC_DIR) },
     open: true,
+    hot: true,
   },
 };
 
 if (isDevMode) {
   if (config.plugins) {
+    config.plugins.push(new webpack.HotModuleReplacementPlugin());
     config.plugins.push(
-      new BundleAnalyzerPlugin({ analyzerMode: 'server', openAnalyzer: false }),
+      new ReactRefreshWebpackPlugin({
+        overlay: {
+          useURLPolyfill: true,
+        },
+      }),
     );
   }
 } else {
