@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/marshot9420/marshot-frontend#readme",
   "dependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@types/webpack-dev-server": "^4.7.2",
     "cross-env": "^7.0.3",
     "dotenv": "^16.3.1",
