@@ -1,0 +1,3 @@
+/* 전체 공통 스타일 설정 파일 */
+@import "configs/reset.css";
+@import "configs/global.css";
