@@ -1,0 +1,13 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  padding: 1rem;
+}
+
+.main__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
