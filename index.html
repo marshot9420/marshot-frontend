@@ -22,11 +22,12 @@
       </header>
 
       <main class="main">
-        <div class="main__grid">
+        <div class="main__content">
           <form class="hidden login-form">
             <input type="text" placeholder="What is your name?" />
             <input type="submit" value="LOGIN" />
           </form>
+          <h1 id="greeting" class="hidden"></h1>
         </div>
       </main>
 
@@ -37,8 +38,9 @@
 
       <div class="sidebar sidebar-toggle">SideBar</div>
     </div>
-    <script src="js/app.js"></script>
-    <script src="js/sidebar.js"></script>
-    <script src="js/login.js"></script>
+    <script type="module" src="js/app.mjs"></script>
+    <script type="module" src="js/sidebar.mjs"></script>
+    <script type="module" src="js/login.mjs"></script>
+    <script type="module" src="js/greeting.mjs"></script>
   </body>
 </html>
