@@ -9,19 +9,10 @@
   </head>
   <body>
     <div id="root">
-      <header class="header">
-        <div class="header__column">
-          <img
-            class="sidebar-button"
-            src="images/icons/hamburger.png"
-            alt="side-bar-button"
-          />
-        </div>
-        <div class="header__column">Clock</div>
-        <div class="header__column">Profile</div>
-      </header>
-
       <main class="main">
+        <div class="main__content">
+          <button id="modal--toggle-button">사이트 추가</button>
+        </div>
         <div class="main__content">
           <h2 id="clock">00:00:00</h2>
           <form class="hidden login-form">
@@ -49,12 +40,34 @@
         </div>
       </main>
 
-      <footer class="footer">
-        <div class="footer__column">Information</div>
-        <div class="footer__column">SNS</div>
-      </footer>
-
-      <div class="sidebar sidebar-toggle">SideBar</div>
+      <div class="modal">
+        <div class="modal__content">
+          <div class="modal__content--header">
+            <div>사이트 추가</div>
+            <button id="modal-close-button">X</button>
+          </div>
+          <div class="modal__content--body">
+            <form id="favorite-form">
+              <label for="favorite-form__name">이름</label>
+              <input
+                id="favorite-form__name"
+                type="text"
+                placeholder="웹 사이트 제목"
+              />
+              <label for="favorite-form__url">URL</label>
+              <input
+                id="favorite-form__url"
+                type="text"
+                placeholder="웹 사이트 주소"
+              />
+            </form>
+          </div>
+          <div class="modal__content--footer">
+            <button type="submit">저장</button>
+            <button>취소</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script type="module" src="js/sidebar.mjs"></script>
     <script type="module" src="js/login.mjs"></script>
@@ -63,6 +76,7 @@
     <script type="module" src="js/todos.mjs"></script>
     <script type="module" src="js/quotes.mjs"></script>
     <script type="module" src="js/weather.mjs"></script>
+    <script type="module" src="js/modal.mjs"></script>
     <script type="module" src="js/favorites.mjs"></script>
   </body>
 </html>
