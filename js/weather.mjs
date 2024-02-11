@@ -6,12 +6,9 @@ function onGeolocationSuccess(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
-  console.log("Latitude: ", latitude);
-  console.log("Longitude: ", longitude);
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log("데이터: ", data.main);
       city.innerText = data.name;
       weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     });
