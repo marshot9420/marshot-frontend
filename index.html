@@ -12,7 +12,12 @@
       <main class="main">
         <div class="main__content">
           <button id="modal--toggle-button">사이트 추가</button>
+          <div id="weather">
+            <span></span>
+            <span></span>
+          </div>
         </div>
+
         <div class="main__content">
           <h2 id="clock">00:00:00</h2>
           <form class="hidden login-form">
@@ -20,7 +25,12 @@
             <input type="submit" value="LOGIN" />
           </form>
           <h1 id="greeting" class="hidden"></h1>
+          <div id="quote">
+            <span></span>
+            <span></span>
+          </div>
         </div>
+
         <div class="main__content">
           <form id="todo-form">
             <input
@@ -29,14 +39,6 @@
             />
           </form>
           <ul id="todo-list"></ul>
-        </div>
-        <div id="quote" class="main__content">
-          <span></span>
-          <span></span>
-        </div>
-        <div id="weather" class="main__content">
-          <span></span>
-          <span></span>
         </div>
       </main>
 
@@ -50,13 +52,13 @@
             <form id="favorite-form">
               <label for="favorite-form__name">이름</label>
               <input
-                id="favorite-form__name"
+                id="favorite-name"
                 type="text"
                 placeholder="웹 사이트 제목"
               />
               <label for="favorite-form__url">URL</label>
               <input
-                id="favorite-form__url"
+                id="favorite-url"
                 type="text"
                 placeholder="웹 사이트 주소"
               />
