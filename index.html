@@ -11,11 +11,16 @@
     <div id="root">
       <main class="main">
         <div class="main__content">
-          <button id="modal--toggle-button">사이트 추가</button>
+          <div class="favorite">
+            <div id="modal--toggle-button">
+              <img src="./images/icons/plus.png" alt="add-favorite" />
+            </div>
+          </div>
           <div id="weather">
             <span></span>
             <span></span>
           </div>
+          <div>뽀모도로 타이머</div>
         </div>
 
         <div class="main__content">
@@ -39,6 +44,7 @@
             />
           </form>
           <ul id="todo-list"></ul>
+          <div id="calender">Calender</div>
         </div>
       </main>
 
@@ -50,15 +56,15 @@
           </div>
           <div class="modal__content--body">
             <form id="favorite-form">
-              <label for="favorite-form__name">이름</label>
+              <label for="favorite-name-input">이름</label>
               <input
-                id="favorite-name"
+                id="favorite-name-input"
                 type="text"
                 placeholder="웹 사이트 제목"
               />
-              <label for="favorite-form__url">URL</label>
+              <label for="favorite-url-input">URL</label>
               <input
-                id="favorite-url"
+                id="favorite-url-input"
                 type="text"
                 placeholder="웹 사이트 주소"
               />

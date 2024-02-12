@@ -1,3 +1,25 @@
+#modal--toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 7rem;
+  width: 7rem;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0.8rem);
+
+  border-radius: 0.8rem;
+  border: 1px solid black;
+
+  cursor: pointer;
+}
+
+#modal--toggle-button img {
+  height: 50%;
+  width: 50%;
+}
+
 .modal {
   display: none;
   -webkit-box-pack: center;
@@ -19,6 +41,7 @@
   flex-direction: column;
 
   position: relative;
+
   width: 43.7rem;
 
   top: -5rem;

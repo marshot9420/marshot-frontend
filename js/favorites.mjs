@@ -1,3 +1,5 @@
 const favoriteForm = document.getElementById("favorite-form");
-const favoriteName = document.getElementById("favorite-name");
-const favoriteUrl = document.getElementById("favorite-url");
+const favoriteNameInput = document.getElementById("favorite-name-input");
+const favoriteUrlInput = document.getElementById("favorite-url-input");
+
+let favorites = [];

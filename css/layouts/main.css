@@ -1,10 +1,17 @@
 .main {
-  display: flex;
+  display: grid;
 
-  padding: 5rem;
+  grid-template-columns: repeat(3, 1fr);
 
-  height: 100%;
-  width: 100%;
+  @media screen and (max-width: 76.8rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 48rem) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  padding: 2rem;
 }
 
 .main__content {
@@ -13,5 +20,9 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 33%;
+  height: 100%;
+
+  gap: 10rem;
+
+  padding: 2rem;
 }
